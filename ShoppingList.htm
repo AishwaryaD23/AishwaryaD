@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Angular JS Filters</title>
+<script type="text/javascript" src="C:\Users\Shruti\Desktop\angular js\angular-1.5.8\angular.min.js"></script>
+<link href="styles.css" rel="Stylesheet" />
+</head>
+
+<body>
+<h1>My Shopping List</h1>
+
+<div ng-app="myShoppingList" ng-controller="myCtrl" >
+<ul>
+<li ng-repeat="product in products">
+{{product}}
+<span ng-click="remove($index)">&times;</span>
+</li>
+</ul>
+<input placeholder="Add Shopping Items here" class="addMe" ng-model="addNewItem" />
+<button class="btn" ng-click="add()">Add</button>
+</br>
+<label class="error">{{errortext}}</label>
+</div>
+
+<script src="List.js"></script>
+</body>
+</html>
